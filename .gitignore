@@ -1,0 +1,15 @@
+build/
+
+*.exe
+*.o
+*.obj
+*.pdb
+*.ilk
+*.s
+*.ii
+
+.vscode/
+
+*.log
+.DS_Store
+Thumbs.db
