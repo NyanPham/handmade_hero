@@ -76,9 +76,9 @@ WinMain(HINSTANCE Instance,
 {
     WNDCLASSA WindowClass = {};
 
-    WindowClass.style = CS_OWNDC | CS_HREDRAW | CS_VREDRAW;
     WindowClass.lpfnWndProc = MainWindowCallback;
     WindowClass.hInstance = Instance; // or GetModuleHandle(0);
+    // WindowClass.hIcon;
     WindowClass.lpszClassName = "HandmadeHeroWindowClass";
 
     if (RegisterClassA(&WindowClass))
@@ -106,7 +106,7 @@ WinMain(HINSTANCE Instance,
                 if (MessageResult > 0)
                 {
                     TranslateMessage(&Message);
-                    DispatchMessage(&Message);
+                    DispatchMessageA(&Message);
                 }
                 else
                 {
